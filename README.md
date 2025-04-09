@@ -1,6 +1,5 @@
 # ISD.VN
-# Nhóm 06
-# Thành viên:
+# Nhóm 06 : 
 - Trần Đức Mạnh - 20225739
 - Nguyễn Nhuận Quang - 20225914
 - Phạm Lê Quang Minh - 20225887
