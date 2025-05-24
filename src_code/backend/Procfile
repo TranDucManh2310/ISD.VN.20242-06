@@ -1,1 +1,1 @@
-#test
+web: node backend/server.js
