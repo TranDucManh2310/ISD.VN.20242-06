@@ -1,6 +1,10 @@
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors')
 const PayOS = require("@payos/node");
-const payOS = new PayOS("1f64a334-ed53-4910-8b54-446f1abe31b0","13846070-6e95-4f38-8bac-b3756a4782ee","740a7476a53bfc09c632da6b9113b8638aa8941dd91434ba24ccd19ee4b0a57a");
+const payOS = new PayOS( 
+  process.env.REACT_APP_PAYOS_CLIENT_ID,
+  process.env.REACT_APP_PAYOS_API_KEY,
+  process.env.REACT_APP_PAYOS_CHECKSUM_KEY
+);
 
 const Order = require("../models/order");
 

@@ -31,9 +31,9 @@ const Footer = () => {
                     <li>
                       <PhoneInTalkIcon/>
                         <span>
-                          <Link to="/">+1234 5678 9123</Link>
+                          <Link to="/">+0866 924 782</Link>
                           <br />
-                          <Link to="/">+1234 5678 9123</Link>
+                          <Link to="/">+0866 924 782</Link>
                         </span>
                     </li>
                   </ul>
@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="copy-right-area">
                 <p className="copy-text">
                   Copyright 2024
-                  <Link to="/">Bán sách</Link>
+                  <Link to="/">  Bán sách</Link>
                 </p>
               </div>
             </div>

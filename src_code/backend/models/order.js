@@ -1,6 +1,39 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const orderSchema = mongoose.Schema({
+    orderCode: {
+        type: String,
+        required: true,
+        unique: true,
+        default: function() {
+            const timestamp = Date.now();
+            const randomStr = Math.random().toString(36).substring(2, 8).toUpperCase();
+            return `ORD-${timestamp}-${randomStr}`;
+        }
+    },
+    orderItems: [{
+        name: {
+            type: String,
+            required: true
+        },
+        quantity: {
+            type: Number,
+            required: true
+        },
+        image: {
+            type: String,
+            required: true
+        },
+        price: {
+            type: Number,
+            required: true
+        },
+        product: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'Product',
+            required: true
+        }
+    }],
     shippingInfo: {
         address: {
             type: String,
@@ -24,42 +57,10 @@ const orderSchema = mongoose.Schema({
         }
     },
     user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'User'
-    },
-    orderCode:{
-        type:Number,
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
         required: true
     },
-    checkoutUrl:{
-        type:String,
-    },
-    orderItems: [
-        {
-            name: {
-                type: String,
-                required: true
-            },
-            quantity: {
-                type: Number,
-                required: true
-            },
-            image: {
-                type: String,
-                required: true
-            },
-            price: {
-                type: Number,
-                required: true
-            },
-            product: {
-                type: mongoose.Schema.Types.ObjectId,
-                required: true,
-                ref: 'products'
-            }
-        }
-    ],
     paymentInfo: {
         id: {
             type: String
@@ -68,10 +69,6 @@ const orderSchema = mongoose.Schema({
             type: String
         }
     },
-    paidAt: {
-        type: Date
-    },
-
     itemsPrice: {
         type: Number,
         required: true,
@@ -104,7 +101,16 @@ const orderSchema = mongoose.Schema({
         type: Date,
         default: Date.now
     }
+});
 
-}, { strict: false })
+// Pre-save middleware để đảm bảo orderCode luôn tồn tại
+orderSchema.pre('save', function(next) {
+    if (!this.orderCode) {
+        const timestamp = Date.now();
+        const randomStr = Math.random().toString(36).substring(2, 8).toUpperCase();
+        this.orderCode = `ORD-${timestamp}-${randomStr}`;
+    }
+    next();
+});
 
-module.exports = mongoose.model('Order', orderSchema)
+module.exports = mongoose.model('Order', orderSchema);

@@ -1,5 +1,5 @@
 const Product = require("../models/product");
-const search = require("../utils/elasticlurn");
+const search=require("../utils/elasticlurn")
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const APIFeatures = require("../utils/apiFeatures");
@@ -7,6 +7,10 @@ const cloudinary = require("cloudinary");
 
 // Create new product   =>   /api/v1/admin/product/new
 exports.newProduct = catchAsyncErrors(async (req, res, next) => {
+  console.log('🎯 Controller reached!');
+  // Kiểm tra body nhận được
+  console.log('Request body:', req.body);
+
   let images = [];
   if (typeof req.body.images === "string") {
     images.push(req.body.images);
@@ -17,9 +21,11 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
   let imagesLinks = [];
 
   for (let i = 0; i < images.length; i++) {
+    console.log(`Uploading image ${i + 1} of ${images.length}...`);
     const result = await cloudinary.v2.uploader.upload(images[i], {
       folder: "products",
     });
+    console.log(`Uploaded image ${i + 1}`);
 
     imagesLinks.push({
       public_id: result.public_id,
@@ -27,71 +33,79 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
     });
   }
 
+  console.log('All images uploaded, creating product...');
+
   req.body.images = imagesLinks;
   req.body.user = req.user.id;
 
   const product = await Product.create(req.body);
+
+  console.log('Product created successfully');
+
   res.status(201).json({
     success: true,
     product,
   });
 });
 
+
 // Get all products   =>   /api/v1/products?keyword=apple
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
-  let objectQuery = {};
+  let objectQuery={}
   let productsCount;
 
-  if (req.query?.price) {
-    objectQuery = {
-      ...objectQuery,
+  console.log("Query Params:", req.query);
+console.log("Mongo Query:", objectQuery);
+
+
+  if(req.query?.price){
+    objectQuery={...objectQuery,
       $and: [
-        { price: { $lte: req.query.price.lte } },
-        { price: { $gte: req.query.price.gte } },
-        // So sánh nhỏ hơn hoặc bằng maxPrice
+        {price:{$lte:(req.query.price.lte)}},
+        {price:{$gte:(req.query.price.gte)}}
+       // So sánh nhỏ hơn hoặc bằng maxPrice
       ],
-    };
+    }
+
   }
-  if (req.query?.ratings) {
-    objectQuery = {
-      ...objectQuery,
-      ratings: { $gte: Number(req.query.ratings.gte) },
-    };
+  if(req.query?.ratings){
+    objectQuery={...objectQuery,
+    ratings:{$gte:Number(req.query.ratings.gte)}
+    }
   }
-  if (req.query?.category) {
-    objectQuery = { ...objectQuery, category: { $in: req.query.category } };
+  if(req.query?.category){
+    objectQuery={...objectQuery,
+    category: {$in: req.query.category}
+    }
   }
-  let resPerPage = 10;
-  productsCount = req.query.category
-    ? await Product.countDocuments({ category: { $in: req.query.category } })
+
+  let resPerPage=10
+  productsCount = req.query.category 
+    ? await Product.countDocuments({category: {$in: req.query.category}}) 
     : await Product.countDocuments();
   const currentPage = Number(req.query?.page) || 1;
   const skip = resPerPage * (currentPage - 1);
   let sort = {};
-  if (req.query.sortByPrice) {
-    sort.price = req.query.sortByPrice;
+  if(req.query.sortByPrice) {
+    sort.price = req.query.sortByPrice
   }
-  let products = await Product.find(objectQuery)
-    .sort(sort)
-    .limit(resPerPage)
-    .skip(skip);
-  let finalSearch;
-  if (req.query?.keyword) {
-    const resultSearch = search(req.query.keyword, products);
-    finalSearch = products.filter((product) => {
-      return resultSearch.find((result) => {
-        return result.ref.toString() == product._id.toString();
-      });
-    });
-  } else finalSearch = products;
+  let products = await Product.find(objectQuery).sort(sort).limit(resPerPage).skip(skip)
+  let finalSearch
+  if(req.query?.keyword) {
+   const resultSearch=search(req.query.keyword,products)
+    finalSearch=products.filter((product)=>{
+      return resultSearch.find((result)=>{return result.ref.toString()==product._id.toString()})
+    })
+  }
+  else finalSearch=products
   let filteredProductsCount = finalSearch.length;
-  if (filteredProductsCount == 0) productsCount = 0;
+  if(filteredProductsCount == 0) productsCount = 0
   res.status(200).json({
     success: true,
     productsCount,
     resPerPage,
     filteredProductsCount,
-    products: finalSearch,
+    products:finalSearch,
   });
 });
 

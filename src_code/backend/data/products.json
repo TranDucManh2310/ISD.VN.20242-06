@@ -807,4 +807,35 @@
     "$date": "2024-04-27T15:07:37.945Z"
   },
   "__v": 0
-}]
+},
+{
+  "_id": {
+    "$oid": "662d14b9c3eea4473ccf6943"
+  },
+  "price": 10000,
+  "ratings": 0,
+  "stock": 122,
+  "numOfReviews": 0,
+  "name": "Sách tin học 8",
+  "description": "Đây là 1 cuốn sách dạy về kỹ năng tin học lớp 8",
+  "category": "Sách học tập",
+  "seller": "Hoàng",
+  "images": [
+    {
+      "_id": {
+        "$oid": "662d14b9c3eea4473ccf6958"
+      },
+      "public_id": "products/idux9qlvelkssnqlt87z",
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747162458/sach_dy5hu7.png"
+    }
+  ],
+  "user": {
+    "$oid": "762cf6576d0ebc4848384118"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": "2024-05-27T14:35:45.230Z"
+  },
+  "__v": 0
+}
+]

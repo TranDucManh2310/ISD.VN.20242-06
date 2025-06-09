@@ -13,7 +13,7 @@
   "author": "Ghulam Abbas",
   "license": "ISC",
   "dependencies": {
-    "@payos/node": "^1.0.6",
+    "@payos/node": "^1.0.10",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.23.0",
@@ -21,8 +21,9 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "elasticlunr": "^0.9.5",
-    "express": "^4.17.1",
+    "express": "^4.21.2",
     "express-fileupload": "^1.2.0",
+    "express-formidable": "^1.2.0",
     "google-auth-library": "^9.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.22",
@@ -32,5 +33,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "keywords": []
 }

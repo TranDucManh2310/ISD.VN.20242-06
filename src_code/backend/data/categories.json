@@ -77,4 +77,44 @@
     }
   ],
   "__v": 0
-}]
+},
+{
+    "name": "CD Phim hành động",
+    "images": [
+      {
+        "_id" :{
+          "$oid": "662d08f8c3eea4473ccf6924"
+     },
+        "public_id": "cd/action_movies",
+        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747159051/cd1_lckfao.png"
+      }
+    ],
+    "__v": 0
+},
+{
+    "name": "CD học tiếng",
+    "images": [
+      {
+        "_id" :{
+          "$oid": "662d08f8c3eea4473ccf6586"
+         },
+        "public_id": "cd/tieng_learning",
+        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747159044/cd2_y8chya.png"
+      }
+    ],
+    "__v": 0
+},
+{
+    "name": "CD nghe nhạc",
+    "images": [
+      {
+        "_id" :{
+          "$oid": "662d08f8c3bda4473ccf6586"
+         },
+        "public_id": "cd/music_listening",
+        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747161097/cd3_yrzei3.png"
+      }
+    ],
+    "__v": 0
+}
+]
