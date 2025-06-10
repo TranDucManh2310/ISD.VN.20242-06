@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 const crypto = require('crypto')
 
@@ -18,7 +17,8 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        select: false
+        // Bỏ select: false để có thể truy cập password
+        required: [true, 'Please enter your password']
     },
     avatar: {
         public_id: {
@@ -39,21 +39,19 @@ const userSchema = new mongoose.Schema({
     },
     resetPasswordToken: String,
     resetPasswordExpire: Date
-
 })
 
-// Hash mật khẩu mới trước khi lưu vào DB
-/*userSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) {
-        next()
-    }
+// REMOVED: Password hashing middleware
+// userSchema.pre('save', async function (next) {
+//     if (!this.isModified('password')) {
+//         next()
+//     }
+//     this.password = await bcrypt.hash(this.password, 10)
+// })
 
-    this.password = await bcrypt.hash(this.password, 10)
-})*/
-
-// Compare user password
+// Compare user password - So sánh trực tiếp (plain text)
 userSchema.methods.comparePassword = async function (enteredPassword) {
-    return await bcrypt.compare(enteredPassword, this.password)
+    return enteredPassword === this.password; // So sánh chuỗi trực tiếp
 }
 
 // Return JWT token
@@ -63,19 +61,18 @@ userSchema.methods.getJwtToken = function () {
     });
 }
 
-// Generate password reset token
+// Generate password reset token - Không hash token
 userSchema.methods.getResetPasswordToken = function () {
     // Generate token
     const resetToken = crypto.randomBytes(20).toString('hex');
 
-    // Hash and set to resetPasswordToken
-    this.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex')
+    // Lưu token trực tiếp không hash
+    this.resetPasswordToken = resetToken;
 
     // Set token expire time
     this.resetPasswordExpire = Date.now() + 30 * 60 * 1000
 
-    return resetToken
-
+    return resetToken;
 }
 
 module.exports = mongoose.model('User', userSchema);
