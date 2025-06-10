@@ -77,7 +77,7 @@ const Shipping = () => {
                             />
                         </div>
 
-                        { <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="postal_code_field">Postal Code</label>
                             <input
                                 type="number"
@@ -87,7 +87,7 @@ const Shipping = () => {
                                 onChange={(e) => setPostalCode(e.target.value)}
                                 required
                             />
-                        </div> }
+                        </div> */}
 
                         <div className="form-group">
                             <label htmlFor="country_field">Quốc Gia</label>

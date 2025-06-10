@@ -16,7 +16,7 @@
         "$oid": "662d088dc3eea4473ccf6925"
       },
       "public_id": "products/u0vmqk6ecnx710nsj1hw",
-      "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1714227341/products/u0vmqk6ecnx710nsj1hw.jpg"
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749569692/tin12_vsqvlk.png"
     }
   ],
   "user": {
@@ -25,66 +25,6 @@
   "reviews": [],
   "createdAt": {
     "$date": "2024-04-27T14:15:41.710Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "662d08bbc3eea4473ccf6926"
-  },
-  "price": 26000,
-  "ratings": 0,
-  "stock": 20,
-  "numOfReviews": 0,
-  "name": "Sách tin học 11",
-  "description": "Sách tin học dành cho học sinh lớp 11",
-  "category": "Sách học tập",
-  "seller": "hieu",
-  "images": [
-    {
-      "_id": {
-        "$oid": "662d08bbc3eea4473ccf6927"
-      },
-      "public_id": "products/str8rvwumcbb0x5i4ypi",
-      "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1714227387/products/str8rvwumcbb0x5i4ypi.jpg"
-    }
-  ],
-  "user": {
-    "$oid": "662cf6576d0ebc4848384118"
-  },
-  "reviews": [],
-  "createdAt": {
-    "$date": "2024-04-27T14:16:27.987Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "662d08fbc3eea4473ccf6928"
-  },
-  "price": 21000,
-  "ratings": 0,
-  "stock": 15,
-  "numOfReviews": 0,
-  "name": "Sách tin học 10",
-  "description": "Sách tin học dành cho học sinh lớp 10",
-  "category": "Sách học tập",
-  "seller": "phuc",
-  "images": [
-    {
-      "_id": {
-        "$oid": "662d08fbc3eea4473ccf6929"
-      },
-      "public_id": "products/tetrfz0m3mh3kxzcktnk",
-      "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1714227450/products/tetrfz0m3mh3kxzcktnk.jpg"
-    }
-  ],
-  "user": {
-    "$oid": "662cf6576d0ebc4848384118"
-  },
-  "reviews": [],
-  "createdAt": {
-    "$date": "2024-04-27T14:17:31.074Z"
   },
   "__v": 0
 },
@@ -106,7 +46,7 @@
         "$oid": "662d0970c3eea4473ccf692b"
       },
       "public_id": "products/flhg4rpx36e0ie3jcfwk",
-      "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1714227568/products/flhg4rpx36e0ie3jcfwk.jpg"
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749569785/ta12_dbyszi.png"
     }
   ],
   "user": {
@@ -115,36 +55,6 @@
   "reviews": [],
   "createdAt": {
     "$date": "2024-04-27T14:19:28.713Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "662d09e2c3eea4473ccf692c"
-  },
-  "price": 120000,
-  "ratings": 0,
-  "stock": 70,
-  "numOfReviews": 0,
-  "name": "Harry Potter - tập 6",
-  "description": "Tiểu thuyết về phép thuật harrt potter tập 6 ",
-  "category": "Văn học - Tiểu thuyết",
-  "seller": "Hiếu",
-  "images": [
-    {
-      "_id": {
-        "$oid": "662d09e2c3eea4473ccf692d"
-      },
-      "public_id": "products/blpilxhshqkmqfv7wvw3",
-      "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1714227681/products/blpilxhshqkmqfv7wvw3.jpg"
-    }
-  ],
-  "user": {
-    "$oid": "662cf6576d0ebc4848384118"
-  },
-  "reviews": [],
-  "createdAt": {
-    "$date": "2024-04-27T14:21:22.305Z"
   },
   "__v": 0
 },
@@ -827,6 +737,96 @@
       },
       "public_id": "products/idux9qlvelkssnqlt87z",
       "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747162458/sach_dy5hu7.png"
+    }
+  ],
+  "user": {
+    "$oid": "762cf6576d0ebc4848384118"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": "2024-05-27T14:35:45.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662d14b9c3eea4473ccf6943"
+  },
+  "price": 10000,
+  "ratings": 0,
+  "stock": 122,
+  "numOfReviews": 0,
+  "name": "CD nhạc bolero",
+  "description": "Đây là đĩa CD nhạc bolero với những bài hát nổi tiếng",
+  "category": "Các loại đĩa CD nghe nhạc",
+  "seller": "Hoàng",
+  "images": [
+    {
+      "_id": {
+        "$oid": "662d14b9c3eea4473ccf6958"
+      },
+      "public_id": "products/idux9qlvelkssnqlt87z",
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749570158/bolero_w1jhj3.png"
+    }
+  ],
+  "user": {
+    "$oid": "762cf6576d0ebc4848384118"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": "2024-05-27T14:35:45.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662d14b9c3eea4473ccf6944"
+  },
+  "price": 20000,
+  "ratings": 0,
+  "stock": 122,
+  "numOfReviews": 0,
+  "name": "Đĩa LP nhạc Việt",
+  "description": "Đây là đĩa LP nhạc Việt với những bài hát nổi tiếng",
+  "category": "Các loại đĩa LP",
+  "seller": "Hoàng",
+  "images": [
+    {
+      "_id": {
+        "$oid": "662d14b9c3eea4473ccf6958"
+      },
+      "public_id": "products/idux9qlvelkssnqlt87z",
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749570570/LP_nh%E1%BA%A1c_unakrv.png"
+    }
+  ],
+  "user": {
+    "$oid": "762cf6576d0ebc4848384118"
+  },
+  "reviews": [],
+  "createdAt": {
+    "$date": "2024-05-27T14:35:45.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662d14b9c3eea4473ccf7943"
+  },
+  "price": 10000,
+  "ratings": 0,
+  "stock": 122,
+  "numOfReviews": 0,
+  "name": "CD nhạc trữ tình",
+  "description": "Đây là đĩa CD nhạc trữ tình với những bài hát nổi tiếng",
+  "category": "Các loại đĩa CD nghe nhạc",
+  "seller": "Hoàng",
+  "images": [
+    {
+      "_id": {
+        "$oid": "662d14b9c3eea4473ccf6958"
+      },
+      "public_id": "products/idux9qlvelkssnqlt87z",
+      "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749570314/CD_tr%E1%BB%AF_t%C3%ACnh_itgmw4.png"
     }
   ],
   "user": {

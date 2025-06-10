@@ -22,7 +22,7 @@
   "role": "user",
   "name": "phuoc",
   "email": "phuoc@gmail.com",
-  "password": "abc321",
+  "password": "abc123",
   "avatar": {
     "public_id": "avatars/edb46oummrl1zphhddme",
     "url": "https://res.cloudinary.com/dutjyu71n/image/upload/v1713682519/avatars/edb46oummrl1zphhddme.jpg"

@@ -79,7 +79,7 @@
   "__v": 0
 },
 {
-    "name": "CD Phim hành động",
+    "name": "Các loại đĩa CD nghe nhạc",
     "images": [
       {
         "_id" :{
@@ -92,27 +92,27 @@
     "__v": 0
 },
 {
-    "name": "CD học tiếng",
+    "name": "Các loại đĩa LP",
     "images": [
       {
         "_id" :{
           "$oid": "662d08f8c3eea4473ccf6586"
          },
         "public_id": "cd/tieng_learning",
-        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747159044/cd2_y8chya.png"
+        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749544928/%C4%91%C4%A9a_LP_wuakdi.png"
       }
     ],
     "__v": 0
 },
 {
-    "name": "CD nghe nhạc",
+    "name": "Các loại đĩa DVD",
     "images": [
       {
         "_id" :{
           "$oid": "662d08f8c3bda4473ccf6586"
          },
         "public_id": "cd/music_listening",
-        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1747161097/cd3_yrzei3.png"
+        "url": "https://res.cloudinary.com/dzlcl0d3g/image/upload/v1749545011/%C4%91%C4%A9a_dvd_uvvpci.png"
       }
     ],
     "__v": 0

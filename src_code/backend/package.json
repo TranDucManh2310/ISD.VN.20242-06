@@ -23,7 +23,6 @@
     "elasticlunr": "^0.9.5",
     "express": "^4.21.2",
     "express-fileupload": "^1.2.0",
-    "express-formidable": "^1.2.0",
     "google-auth-library": "^9.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.22",

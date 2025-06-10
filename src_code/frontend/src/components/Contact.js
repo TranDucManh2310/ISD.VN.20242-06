@@ -107,7 +107,7 @@ const Contact = () => {
                 <div class="branch-info-body box--shadow">
                   <ul class="text-center">
                     <li>
-                     Address: Tu Ho, Yen Phu, Yen My, Hung Yen
+                      Address: Tu Ho, Yen Phu, Yen My, Hung Yen
                     </li>
                     <li>Email: info.example@gmail.com</li>
                     <li>Phone: +86 000 0000000</li>
