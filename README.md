@@ -7,6 +7,12 @@
 - Nguyễn Huy Hoàng - 20225628   
 # Task Assignment
 ![image](https://github.com/user-attachments/assets/f9f50186-4542-488b-8c32-78493636d1e5)
+# Cách chạy dự án
+- Đầu tiên, hãy clone dự án về local.
+- Sau đó import data trong backend/data vào mongo compass.
+- Mở 2 terminal. Terminal thứ nhất hãy cd vào frontend, sau đó chạy lệnh npm i và npm run start.
+- Terminal thứ hai hãy cd vào backend, sau đó chạy lệnh npm run start.
+- Sau đó cửa sổ trình duyệt sẽ hiện lên, đợi 1 lúc cho load xong là được.
 
 
 
